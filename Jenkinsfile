@@ -12,5 +12,13 @@ pipeline{
                 sh "mvn clean install"
             }
          }
+         stage("Building our Image"){
+                     steps{
+                         script{
+                             echo "Building dockerimage"
+                             sh 'docker build -t tanishka23/scientific_calc .'
+                         }
+                     }
+                 }
     }
 }
