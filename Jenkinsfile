@@ -1,4 +1,7 @@
 pipeline{
+environment{
+        DOCKERHUB_CREDENTIALS = credentials('Dockercred')
+	}
     agent any
     stages{
         stage("Git clone"){
@@ -37,7 +40,6 @@ pipeline{
                  }
                  stage("Ansible Deploy"){
                      steps{
-         //                 ansiblePlaybook colorized: true, disableHostKeyChecking: true, installation: 'Ansible', inventory: 'inventory', playbook: 'plybk.yml'
                              sh "ansible-playbook -i inventory plybk.yml"
                      }
                  }
