@@ -10,7 +10,7 @@
         state: started
 
     - name: pull docker image
-      shell: docker pull tanishka23/scientific_calc
+      shell: docker pull tanishka23/calculator
 
     - name: running container
-      shell: docker run -it -d tanishka23/scientific_calc
+      shell: docker run -it -d tanishka23/calculator
