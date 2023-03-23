@@ -12,6 +12,7 @@ public class Calculator {
 
     public static void main(String[] args) {
 //code
+        //
         Calculator calculator = new Calculator();
         Scanner scanner = new Scanner(System.in);
         double number1, number2;
